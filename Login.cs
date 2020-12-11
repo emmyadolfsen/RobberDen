@@ -5,21 +5,17 @@ namespace Robber
 {
     public class Login
     {
-        public static readonly string Heading =
-        @" ___ ___ ___ " + '\n' +
-        @"|__ \__ \__ \" + '\n' +
-        @"  /_/ /_/ /_/" + '\n' +
-        @" (_) (_) (_) ";
+
         public static void LoginTry()
         {
-            var illustrations = new Illustrations();
+            var illustrations = new Illustrations(); // Instansiera klassen illustrations
+            var robberDen = new RobberDen();    // Instansiera klassen writemenu
             string Password = "";
             
             Clear();
-            WriteLine(Heading);
-            WriteLine();
-        
-            while (Password != "ronja")
+            illustrations.LoginHeading(); // Hämta och skriv ut rubrik
+            
+            while (Password != "ronja") // Loopa om fel lösenord skrivs in
             {
                 Write("Skriv in lösenord för att passera:\n");
                 Password = ReadLine();
@@ -30,7 +26,6 @@ namespace Robber
                 }
             }
             Clear();
-            var robberDen = new RobberDen();    // Instansiera klassen writemenu
             robberDen.MainMenu();
 
 

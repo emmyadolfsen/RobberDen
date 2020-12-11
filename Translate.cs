@@ -5,18 +5,14 @@ namespace Robber
 {
     public class Translate
     {
-    public static readonly string Heading =
-            @" ___                                   _       _   " + '\n' +
-            @"| _ \_____ ____ _ _ _ ____ __ _ _ __ _| |_____| |  " + '\n' +
-            @"|   / _ \ V / _` | '_(_-< '_ \ '_/ _` | / / -_)  _|" + '\n' +
-            @"|_|_\___/\_/\__,_|_| /__/ .__/_| \__,_|_\_\___|\__|" + '\n' +
-            @"                        |_|                        ";
         public void RobberLanguage()
         {
             var robberDen = new RobberDen();    // Instansiera klassen Robberden
-            ForegroundColor = ConsoleColor.DarkCyan;
-            WriteLine(Heading);
-            ResetColor();
+            var illustrations = new Illustrations();
+            var writeMenu = new WriteMenu(); // Instansiera klassen writemenu
+            
+            illustrations.Rovarspraket();
+
             WriteLine();
             Write("Skriv in det du vill översätta till rövarspråket: \n");
             string input = Console.ReadLine().ToLower();
@@ -42,22 +38,9 @@ namespace Robber
             Console.WriteLine("\nRÖVARSPRÅKET:");
             Console.WriteLine(parsedChar);
             
-            WriteLine();
-            WriteLine("Ny översättning [enter], eller gå tillbaks [escape]?");
-            switch (ReadKey(true).Key)
-            {
-                case ConsoleKey.Enter:
-                    Clear();
-                    RobberLanguage(); // Kör igen
-                    break;
-                case ConsoleKey.Escape:
-                    Clear();
-                    robberDen.MainMenu();   // Gå till menyn
-                    break;
-                default:
-                    robberDen.MainMenu();   // Gå till menyn
-                    break;
-            }
+            writeMenu.WriteEndOfGameMenu(); // Hämta och skriv ut input val
+            RobberLanguage(); // Starta spelet igen
+
         }
     }
 }

@@ -26,7 +26,6 @@ namespace Robber
             writeMenu.WriteEndOfGameMenu(); // Hämta och skriv ut input val
             
             DateTime start = DateTime.Now; // Start tiden
-            CursorVisible = false; // Dölj cursor
 
             int score = 0; // Sätt score till 0
 
@@ -45,7 +44,6 @@ namespace Robber
                 }
             }
 
-            CursorVisible = true; // Visa cursor
             illustrations.HitRightRobber(); // Hämta och skriv ut rubrik
 
             if (score < 1) // Om poängen är 0

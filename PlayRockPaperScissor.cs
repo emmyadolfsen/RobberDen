@@ -25,8 +25,8 @@ namespace Robber
 
             while (round) // Loop så längee som round = true
             {
-                CursorVisible = false; // Dölj cursor
-
+                
+                CursorVisible = true; // Visa cursor
                 WriteLine();
                 WriteLine("Sten sax eller påse?");
 
@@ -71,7 +71,8 @@ namespace Robber
                     }
                     else if (computerCount >= 3 && playerCount < computerCount) // Om ås-pelle har mer än 3 poäng och mer än player
                     {
-                        WriteLine("Typiskt! Ett år till med Ås-pelle på tronen.");
+                        WriteLine();
+                        WriteLine("Du förlorade.. Typiskt! Ett år till med Ås-pelle på tronen.");
                         round = false; // Hoppa ur loopen
                     }
                 }

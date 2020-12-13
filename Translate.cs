@@ -12,7 +12,7 @@ namespace Robber
             var writeMenu = new WriteMenu(); // Instansiera klassen writemenu
             
             illustrations.Rovarspraket();
-
+            CursorVisible = true; // Visa cursor
             WriteLine();
             Write("Skriv in det du vill översätta till rövarspråket: \n");
             string input = Console.ReadLine().ToLower();

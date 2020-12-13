@@ -34,6 +34,7 @@ namespace Robber
                 case ConsoleKey.Escape:                   // vid input esc
                     Clear();
                     WriteLine("\nTack för idag!\n");
+                    CursorVisible = true; // Visa cursor
                     Environment.Exit(0);
                     break;
 

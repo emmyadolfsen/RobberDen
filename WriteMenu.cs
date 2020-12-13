@@ -10,6 +10,8 @@ namespace Robber
             var illustrations = new Illustrations(); // Instansiera Illustrations klassen
             illustrations.DenHeading(); // Anropa denHeading som skriver ut rubrik
 
+            CursorVisible = false; // Dölj cursor
+
             // Skriv ut meny
             WriteLine();
             WriteLine("Välkommen in i Rövarkulan\n");
@@ -25,7 +27,7 @@ namespace Robber
         public void WriteEndOfGameMenu()
         {
             var robberDen = new RobberDen();    // Instansiera klassen robberden
-
+            CursorVisible = false; // Dölj cursor
             WriteLine();
             WriteLine("Spela [enter], eller gå tillbaks [escape]?");
             switch (ReadKey(true).Key)

@@ -21,7 +21,7 @@ namespace Robber
             illustrations.HitRightRobber(); // Hämta och skriv ut rubrik
 
             WriteLine(" Ett annat rövarband härjar i våra skogar.. ");
-            WriteLine($" Du har {(int)playTime.TotalSeconds}sekunder på dig att träffa så många rövare du kan");
+            WriteLine($" Du har {(int)playTime.TotalSeconds} sekunder på dig att träffa så många rövare du kan");
             WriteLine(" Använd dina snabba fingrar för att matcha bokstäverna.. och skicka rövaren ut ur skogen!");
 
             writeMenu.WriteEndOfGameMenu(); // Hämta och skriv ut input val

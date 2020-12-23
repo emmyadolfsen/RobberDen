@@ -14,13 +14,13 @@ namespace Robber
 
             // Skriv ut meny
             WriteLine();
-            WriteLine("Välkommen in i Rövarkulan\n");
-            WriteLine("Vad vill du göra?\n");
-            WriteLine("1] Rövarspråket");
-            WriteLine("2] Spela Sten Sax Påse");
-            WriteLine("3] Spela Hit Right Robber");
+            WriteLine(" Välkommen in i Rövarkulan\n");
+            WriteLine(" Vad vill du göra?\n");
+            WriteLine(" 1] Rövarspråket");
+            WriteLine(" 2] Spela Sten Sax Påse");
+            WriteLine(" 3] Spela Hit Right Robber");
             WriteLine();
-            WriteLine("[Esc] Avsluta\n");
+            WriteLine(" [Esc] Avsluta\n");
 
         }
 
@@ -29,7 +29,8 @@ namespace Robber
             var robberDen = new RobberDen();    // Instansiera klassen robberden
             CursorVisible = false; // Dölj cursor
             WriteLine();
-            WriteLine("Spela [enter], eller gå tillbaks [escape]?");
+            ForegroundColor = ConsoleColor.Magenta;
+            WriteLine(" Spela [enter], eller gå tillbaks [escape]?");
             switch (ReadKey(true).Key)
             {
                 case ConsoleKey.Enter: // Om input är enter

@@ -12,17 +12,20 @@ namespace Robber
             var robberDen = new RobberDen();    // Instansiera klassen writemenu
             string Password = "";
             
+            
+            BackgroundColor = ConsoleColor.Black;
             Clear();
             illustrations.LoginHeading(); // Hämta och skriv ut rubrik
-            
+            CursorVisible = true; // Visa cursor
             while (Password != "ronja") // Loopa om fel lösenord skrivs in
             {
-                Write("Skriv in lösenord för att passera:\n");
+                Write(" Skriv in lösenord för att passera: ");
                 Password = ReadLine();
                 if (Password != "ronja")
                 {
                     Clear();
-                    WriteLine("Fel lösenord");
+                    WriteLine();
+                    WriteLine(" Fel lösenord...");
                 }
             }
             Clear();

@@ -13,7 +13,7 @@ namespace Robber
             var robberDen = new RobberDen();    // Instansiera klassen robberden
             var writeMenu = new WriteMenu(); // Instansiera klassen writemenu
 
-            illustrations.RockPaperScissor(); // Anropa och hämta Rockpaperscissors header
+            illustrations.RockPaperScissors(); // Anropa och hämta Rockpaperscissors header
 
             WriteLine();
             WriteLine(" Det är dags för den årliga prestigefyllda tävlingen Sten Sax Påse.");

@@ -10,7 +10,7 @@ namespace Robber
         {
             var writeMenu = new WriteMenu();    // Instansiera klassen WriteMenu
             var translate = new Translate();    // Instansiera klassen Translate
-            var playRockPaperScissor = new PlayRockPaperScissor(); // Instansiera klassen PlayRockPaperScissors
+            var playRockPaperScissors = new PlayRockPaperScissor(); // Instansiera klassen PlayRockPaperScissors
             var playHitRightRobber = new PlayHitRightRobber();  // Instansiera klassen PlayHitRightRobber
             writeMenu.WriteDenMenu();   // Skriv ut meny
 
@@ -24,7 +24,7 @@ namespace Robber
 
                 case ConsoleKey.D2:                   // vid input 2
                     Clear();
-                    playRockPaperScissor.Game();
+                    playRockPaperScissors.Game();
                     break;
 
                 case ConsoleKey.D3:                   // vid input 3

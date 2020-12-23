@@ -46,7 +46,7 @@ namespace Robber
             WriteLine();
         }
 
-        public void RockPaperScissor()
+        public void RockPaperScissors()
         {
             WriteLine();
             ForegroundColor = ConsoleColor.Magenta;
